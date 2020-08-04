@@ -48,7 +48,7 @@ public class TsubuyakiController {
         return "redirect:/read";
     }
 
-    @PostMapping( "/search" )
+    @GetMapping( "/search" )
     String searchTsubuyaki( @ModelAttribute( "tsubuyakiSearchForm" ) TsubuyakiSearchForm form, Model model ) {
         List<Tsubuyaki> list = ts.searchTsubuyaki( form.getSearchWord() );
 

@@ -24,7 +24,7 @@
     </form>
 
     <h2>検索する</h2>
-    <form th:action=@{/search} th:object=${tsubuyakiSearchForm} method="post">
+    <form th:action=@{/search} th:object=${tsubuyakiSearchForm} method="get">
         <label for="searchWord">検索ワード：</label>
         <input type="text" required th:field="*{searchWord}" />
         <input type="submit" value="つぶやきを検索" />
