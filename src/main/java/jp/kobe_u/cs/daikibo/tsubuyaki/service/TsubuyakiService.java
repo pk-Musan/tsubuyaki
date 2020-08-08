@@ -35,8 +35,8 @@ public class TsubuyakiService {
         return list;
     }
 
-    public List<Tsubuyaki> searchTsubuyaki( String serachWord ) {
-        Iterable<Tsubuyaki> found = repo.findByCommentContains( serachWord );
+    public List<Tsubuyaki> searchTsubuyaki( String searchWord ) {
+        Iterable<Tsubuyaki> found = repo.findByCommentContains( searchWord );
         ArrayList<Tsubuyaki> list = new ArrayList<>();
 
         found.forEach( list::add );
